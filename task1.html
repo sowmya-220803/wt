@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>Task1</title>
+    <style>
+        body{
+            background-color:aqua ;
+        }
+        button{
+           background-color: green;
+        }
+    </style>
+    <script>
+        //task1
+        let x=5;
+        let y=3;
+        let z;
+        z=x+y;
+        const pi=3.14;
+        var name="hello";
+        console.log(x);
+        console.log(y);
+        console.log(z);
+        console.log(pi);
+        console.log(name);
+
+        //task2
+        function add(){
+             const X=Number(document.getElementById("x_input").value);
+             const Y=Number(document.getElementById("y_input").value);
+             document.getElementById("result").innerHTML="sum:"+(X+Y);
+             
+        }
+
+        function sub(){
+            const a=Number(document.getElementById("x_input").value);
+            const b=Number(document.getElementById("y_input").value);
+            document.getElementById("res").innerHTML="subtraction:"+(a-b);
+        }
+
+        //task3
+
+        window.alert("do you agree with this page");
+         const age=Number(window.prompt("enter the age:"));
+        alert(age>=18?"your welcome":"not eligible");
+          
+        //task4
+        function change(){
+        document.getElementById("con").innerHTML="how are you:";
+
+        }
+        function adding(){
+            document.getElementById("bun").innerHTML="what are you doing?";
+        }
+        function remove(){
+            document.getElementById("bun").innerHTML="";
+        }
+
+        //task5
+          function changing(){
+            const r=document.getElementById("hi");
+            r.style.color="red";
+            r.style.fontSize="30px";
+            r.style.backgroundColor="violet";
+
+          }
+
+        //task6
+                
+    </script>
+</head>
+<body>
+
+<p>hello </p>
+<label>enter x value:</label><br>
+<input id="x_input"><br>
+<label>enter y value:</label><br>
+<input id="y_input"><br>
+<label>click for the sum of two numbers</label><br>
+<button onclick="add()">SUM</button>
+<button onclick="sub()">SUB</button>
+<p id="result"></p>
+<p id="res"></p>
+
+<p id="con">hi hello</p>
+<button onclick="change()">change</button>
+<p id="bun"></p>
+<button onclick="adding()">add content</button>
+
+<button onclick="remove()">remove content</button>
+<p id="hi">changing the color,font size,and background of an html element using javascript</p>
+<button onclick="changing()">changing color</button>
+</body>
