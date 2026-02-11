@@ -1,92 +1,124 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
 <head>
-    <title>Task1</title>
+    <meta charset="UTF-8">
+    <title>Assignment Upload - Classroom</title>
     <style>
-        body{
-            background-color:aqua ;
-        }
-        button{
-           background-color: green;
-        }
-    </style>
-    <script>
-        //task1
-        let x=5;
-        let y=3;
-        let z;
-        z=x+y;
-        const pi=3.14;
-        var name="hello";
-        console.log(x);
-        console.log(y);
-        console.log(z);
-        console.log(pi);
-        console.log(name);
-
-        //task2
-        function add(){
-             const X=Number(document.getElementById("x_input").value);
-             const Y=Number(document.getElementById("y_input").value);
-             document.getElementById("result").innerHTML="sum:"+(X+Y);
-             
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f4;
+            margin: 0;
         }
 
-        function sub(){
-            const a=Number(document.getElementById("x_input").value);
-            const b=Number(document.getElementById("y_input").value);
-            document.getElementById("res").innerHTML="subtraction:"+(a-b);
-        }
+```
+    /* Header */
+    .header {
+        background-color: #1a73e8;
+        color: white;
+        padding: 15px;
+        font-size: 22px;
+        text-align: center;
+    }
 
-        //task3
+    /* Main container */
+    .container {
+        width: 60%;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
 
-        window.alert("do you agree with this page");
-         const age=Number(window.prompt("enter the age:"));
-        alert(age>=18?"your welcome":"not eligible");
-          
-        //task4
-        function change(){
-        document.getElementById("con").innerHTML="how are you:";
+    h2 {
+        color: #202124;
+    }
 
-        }
-        function adding(){
-            document.getElementById("bun").innerHTML="what are you doing?";
-        }
-        function remove(){
-            document.getElementById("bun").innerHTML="";
-        }
+    .details {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+    }
 
-        //task5
-          function changing(){
-            const r=document.getElementById("hi");
-            r.style.color="red";
-            r.style.fontSize="30px";
-            r.style.backgroundColor="violet";
+    label {
+        font-weight: bold;
+    }
 
-          }
+    input[type="file"],
+    textarea {
+        width: 100%;
+        margin-top: 8px;
+        margin-bottom: 15px;
+        padding: 8px;
+    }
 
-        //task6
-                
-    </script>
+    textarea {
+        height: 80px;
+        resize: none;
+    }
+
+    .submit-btn {
+        background-color: #1a73e8;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .submit-btn:hover {
+        background-color: #1557b0;
+    }
+
+    .status {
+        color: green;
+        margin-top: 10px;
+        display: none;
+    }
+</style>
+```
+
 </head>
 <body>
 
-<p>hello </p>
-<label>enter x value:</label><br>
-<input id="x_input"><br>
-<label>enter y value:</label><br>
-<input id="y_input"><br>
-<label>click for the sum of two numbers</label><br>
-<button onclick="add()">SUM</button>
-<button onclick="sub()">SUB</button>
-<p id="result"></p>
-<p id="res"></p>
+<div class="header">
+    Google Classroom - Assignment
+</div>
 
-<p id="con">hi hello</p>
-<button onclick="change()">change</button>
-<p id="bun"></p>
-<button onclick="adding()">add content</button>
+<div class="container">
+    <h2>Assignment: Web Technology Project</h2>
 
-<button onclick="remove()">remove content</button>
-<p id="hi">changing the color,font size,and background of an html element using javascript</p>
-<button onclick="changing()">changing color</button>
+```
+<div class="details">
+    <p><strong>Subject:</strong> Web Technology</p>
+    <p><strong>Due Date:</strong> 20 Feb 2026</p>
+    <p><strong>Instructions:</strong> Upload your HTML/CSS project file before the deadline.</p>
+</div>
+
+<form onsubmit="submitAssignment(event)">
+    <label>Upload File:</label>
+    <input type="file" required>
+
+    <label>Private Comment (Optional):</label>
+    <textarea placeholder="Add a comment to your teacher..."></textarea>
+
+    <button class="submit-btn" type="submit">Turn In</button>
+
+    <p class="status" id="status">Assignment Submitted Successfully!</p>
+</form>
+```
+
+</div>
+
+<script>
+function submitAssignment(event) {
+    event.preventDefault();
+    document.getElementById("status").style.display = "block";
+}
+</script>
+
 </body>
+</html>
