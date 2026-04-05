@@ -1,0 +1,140 @@
+<html>
+	<head>
+				<title>lab1</title>
+	</head>
+	<body bgcolor="pink">
+		<h1><u>variables defining task1</h1>
+		<button type="button" onclick='variables()'>Task-1</button>
+			<script>
+				function variables(){
+				var a="chinnu";
+				let b="bunny";
+				const p=3.14;
+				alert("for results check in console");
+				console.log("value of a is",a);
+				console.log("value of b is ",b);
+				console.log("value of pi is ",p);}
+			</script>
+			<h1> <u> basic function creating</u></h1>
+			<button type="button" onclick='addition(5,4)'> add</button>
+			<button type="button" onclick='add(5,4)'> add</button>
+			<button type="button" onclick='subtraction(5,4)'> sub</button>
+			<button type="button" onclick='sub(5,4)'> sub</button>
+			<script>
+				function addition(a,b){
+					alert("addition of a and b:="+(a+b));
+					console.log("value is ",(a+b));
+				}
+				const add=(a,b)=>{
+					alert("arrow function addition of a and b"+(a+b));
+					console.log("value is ",(a+b));
+				}
+				function subtraction(a,b){
+					alert("addition of a and b"+(a-b));
+					console.log("value is ",(a-b));
+				}
+				const sub=(a,b)=>{
+					alert("arrow function addition of a and b"+(a-b));
+					console.log("value is ",(a-b));
+				}
+			</script>
+			<h1><u> built in functions</u></h1>
+			<button type="button" onclick='task()'>Task-3</button>
+			<script>
+				function task(){
+				alert("this is an alert message@! ");
+				let name=prompt("what is your name?");
+				alert("hello my dear  "+name+"  beauty");
+				console.log("hello",name,"cutie pie");}
+			</script>
+			<h1>Content change</h1>
+				<h2 id="chinnu">hello guest!</h2>
+ 		<button type="button" onclick='document.getElementById("chinnu").innerHTML="hello chinnu"'>chinnu</button>
+<h2>Task 5: Style HTML Tags</h2>
+
+<p id="mypara">this text will change when you click the buttons</p>
+
+<button onclick="applyStyle()">apply style</button>
+<button onclick="toggleStyle()">toggle style</button>
+
+<script>
+
+function applyStyle() {
+    let p = document.getElementById("mypara");
+    p.style.color = "blue";
+    p.style.fontSize = "24px";
+    p.style.backgroundColor = "yellow";
+    p.style.padding = "10px";
+}
+
+// 🔵 5 style sets stored in an array
+let styles = [
+    { color: "white",  background: "black" },
+    { color: "blue",   background: "pink" },
+    { color: "red",    background: "yellow" },
+    { color: "purple", background: "lightgreen" },
+    { color: "brown",  background: "orange" }
+];
+
+// To track which style is next
+let index = 0;
+
+function toggleStyle() {
+    let p = document.getElementById("mypara");
+
+    // Apply current style
+    p.style.color = styles[index].color;
+    p.style.backgroundColor = styles[index].background;
+
+    // Move to next style (cycle)
+    index = (index + 1) % styles.length;
+}
+
+</script>
+
+<h2>Task 6: Events and Functions</h2>
+
+<button onclick="showMessage()">Click Me</button>
+
+<p id="hoverText" 
+   onmouseover="mouseOverEffect()" 
+   onmouseout="mouseOutEffect()"
+   style="width: 200px; padding: 10px; border: 1px solid black;">
+   Hover over this text!
+</p>
+<img src="C:\Users\pc\OneDrive\Pictures\my pic.jpg" style="width: 200px; padding: 10px;"
+onmouseout="hai()" onmouseup="hello()" />
+
+<form onsubmit="submitForm(event)">
+    <input type="text" id="nameField" placeholder="Enter your name">
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+function showMessage() {
+    console.log("Button clicked!");
+}
+
+function mouseOverEffect() {
+    document.getElementById("hoverText").style.backgroundColor = "lightblue";
+}
+
+function hai(){
+	alert("hey you are far away from the pic come here!");
+}
+
+function hello(){
+	alert("hey you are on the pic !");
+}
+
+function mouseOutEffect() {
+    document.getElementById("hoverText").style.backgroundColor = "blue";
+}
+
+function submitForm(event) {
+    event.preventDefault();
+    console.log("Form submitted successfully!");
+}
+</script>
+	</body>
+</html>
